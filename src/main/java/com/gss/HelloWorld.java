@@ -1,10 +1,8 @@
 package com.gss;
 
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
-
-public class HelloWorld implements InitializingBean {
+public class HelloWorld {
     private String message;
+    private String message2;
 
     public HelloWorld() {
     }
@@ -21,8 +19,17 @@ public class HelloWorld implements InitializingBean {
         this.message = message;
     }
 
+    public String getMessage2() {
+        return message2;
+    }
+
+    public void setMessage2(String message2) {
+        this.message2 = message2;
+    }
+
     public void printMessage() {
         System.out.println("Your message: " + message);
+        System.out.println("Your message: " + message2);
     }
 
     public void afterPropertiesSet() throws Exception {

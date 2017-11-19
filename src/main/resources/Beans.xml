@@ -3,9 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-    <bean id="HelloWorld" class="com.gss.HelloWorld" scope="prototype" destroy-method="destroy">
+    <bean id="helloWorld" class="com.gss.HelloWorld" scope="prototype" destroy-method="destroy">
         <property name="message" value="Hello World!"/>
+        <property name="message2" value=".....!"/>
     </bean>
 
-    <bean class="com.gss.InitHelloworld"/>
+    <bean id="helloUSA" class="com.gss.HelloUSA" parent="helloWorld" >
+        <property name="message2" value="Hello USA!"/>
+        <property name="message3" value="Good morning!"/>
+    </bean>
 </beans>

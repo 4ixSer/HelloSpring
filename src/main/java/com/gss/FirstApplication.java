@@ -17,8 +17,6 @@ public class FirstApplication {
 
         obj.setMessage("I'm new Obgegs");
         obj.printMessage();
-        HelloWorld newObj = (HelloWorld) context.getBean("HelloWorld");
-        newObj.printMessage();
         context.registerShutdownHook();
 
     }

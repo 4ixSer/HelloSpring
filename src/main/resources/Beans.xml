@@ -6,4 +6,6 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
     <bean id="HelloWorld" class="com.gss.HelloWorld" scope="prototype" destroy-method="destroy">
         <property name="message" value="Hello World!"/>
     </bean>
+
+    <bean class="com.gss.InitHelloworld"/>
 </beans>

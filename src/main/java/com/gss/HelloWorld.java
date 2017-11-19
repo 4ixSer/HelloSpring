@@ -1,6 +1,9 @@
 package com.gss;
 
-public class HelloWorld {
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class HelloWorld implements InitializingBean {
     private String message;
 
     public HelloWorld() {
@@ -20,5 +23,13 @@ public class HelloWorld {
 
     public void printMessage() {
         System.out.println("Your message: " + message);
+    }
+
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("Bean is going init ");
+    }
+
+    public void destroy() throws Exception {
+        System.out.println("Bean is going destroy ");
     }
 }

@@ -1,33 +1,23 @@
 package com.gss;
 
+import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 public class FirstApplication {
-    private String message;
+    public static final String BEANS_XML = "Beans.xml";
 
-    public FirstApplication() {
-    }
-
-    public FirstApplication(String message) {
-        this.message = message;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
 
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
-        FirstApplication obj = (FirstApplication) context.getBean("FirstApplication");
+        ApplicationContext context = new ClassPathXmlApplicationContext(BEANS_XML);
+//        ApplicationContext context = new FileSystemXmlApplicationContext("src\\main\\resources\\"+BEANS_XML);
+        HelloWorld obj = (HelloWorld) context.getBean("HelloWorld");
         obj.printMessage();
-    }
+        obj.setMessage("I'm new Obgegs");
 
-    public void printMessage() {
-        System.out.println("Your message: " + message);
+        HelloWorld newObj = (HelloWorld) context.getBean("HelloWorld");
+
+        newObj.printMessage();
     }
 }

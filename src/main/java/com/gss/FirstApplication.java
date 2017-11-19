@@ -13,9 +13,9 @@ public class FirstApplication {
         ApplicationContext context = new ClassPathXmlApplicationContext(BEANS_XML);
 //        ApplicationContext context = new FileSystemXmlApplicationContext("src\\main\\resources\\"+BEANS_XML);
         HelloWorld obj = (HelloWorld) context.getBean("HelloWorld");
-        obj.printMessage();
-        obj.setMessage("I'm new Obgegs");
 
+        obj.setMessage("I'm new Obgegs");
+        obj.printMessage();
         HelloWorld newObj = (HelloWorld) context.getBean("HelloWorld");
 
         newObj.printMessage();

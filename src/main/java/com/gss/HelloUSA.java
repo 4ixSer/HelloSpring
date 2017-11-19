@@ -1,16 +1,16 @@
 package com.gss;
 
 public class HelloUSA {
-    private String message;
+    private String message1;
     private String message2;
     private String message3;
 
-    public String getMessage() {
-        return message;
+    public String getMessag1e1() {
+        return message1;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setMessage1(String message) {
+        this.message1 = message;
     }
 
     public String getMessage2() {
@@ -30,7 +30,7 @@ public class HelloUSA {
     }
 
     public void printMessage() {
-        System.out.println("Your message: " + message);
+        System.out.println("Your message: " + message1);
         System.out.println("Your message: " + message2);
         System.out.println("Your message: " + message3);
     }

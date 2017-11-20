@@ -17,4 +17,12 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
     <bean id="helloUSA" class="com.gss.HelloUSA" parent="beanTemplate" >
         <property name="message2" value="Hello USA!"/>
     </bean>
+
+    <bean id="textEditor" class="com.gss.TextEditor">
+        <constructor-arg ref="spellChecker"/>
+    </bean>
+
+    <bean id="spellChecker" class="com.gss.SpellChecker">
+
+    </bean>
 </beans>

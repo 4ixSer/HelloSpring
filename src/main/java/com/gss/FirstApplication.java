@@ -9,11 +9,7 @@ public class FirstApplication {
 
     public static void main(String[] args) throws InterruptedException {
         AbstractApplicationContext context = new ClassPathXmlApplicationContext(BEANS_XML);
-//        ApplicationContext context = new FileSystemXmlApplicationContext("src\\main\\resources\\"+BEANS_XML);
-        HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
-        obj.setMessage("I'm new Obgegs");
-        obj.printMessage();
-        HelloUSA usa = (HelloUSA) context.getBean("helloUSA");
-        usa.printMessage();
+        TextEditor te = (TextEditor) context.getBean("textEditor");
+        te.spellCheck();
     }
 }

@@ -9,7 +9,7 @@ public class FirstApplication {
 
     public static void main(String[] args) throws InterruptedException {
         AbstractApplicationContext context = new ClassPathXmlApplicationContext(BEANS_XML);
-        TextEditor te = (TextEditor) context.getBean("textEditor");
-        te.spellCheck();
+        TextEditor textEditor= (TextEditor) context.getBean("textEditor");
+        System.out.println(textEditor);
     }
 }

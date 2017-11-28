@@ -1,5 +1,7 @@
 package com.gss;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -8,8 +10,10 @@ public class FirstApplication {
 
 
     public static void main(String[] args) throws InterruptedException {
-        AbstractApplicationContext context = new ClassPathXmlApplicationContext(BEANS_XML);
-        TextEditor textEditor= (TextEditor) context.getBean("textEditor");
-        System.out.println(textEditor);
+        AnnotationConfigApplicationContext ctx =
+               new AnnotationConfigApplicationContext();
+        ctx.register(HelloWorld.class);
+        HelloWorld  helloWorld = ctx.getBean(HelloWorld.class);
+        helloWorld.printMessage();
     }
 }

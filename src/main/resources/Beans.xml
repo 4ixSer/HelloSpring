@@ -13,28 +13,28 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
         <property name="message2" value=".....!"/>
         <property name="message3" value="Good morning!"/>
     </bean>
-    <bean id="helloWorld" class="com.gss.HelloWorld" scope="prototype" destroy-method="destroy">
+    <bean id="helloWorld" class="com.gss.test1.HelloWorld" scope="prototype" destroy-method="destroy">
         <property name="message" value="Hello World!"/>
         <property name="message2" value=".....!"/>
     </bean>
 
-    <bean id="helloUSA" class="com.gss.HelloUSA" parent="beanTemplate">
+    <bean id="helloUSA" class="com.gss.test1.HelloUSA" parent="beanTemplate">
         <property name="message2" value="Hello USA!"/>
     </bean>
 
-    <bean id="textEditor" class="com.gss.TextEditor">
+    <bean id="textEditor" class="com.gss.test1.TextEditor">
         <property name="size" value="1"/>
     </bean>
 
-    <bean id="spellChecker1" class="com.gss.SpellChecker">
+    <bean id="spellChecker1" class="com.gss.test1.SpellChecker">
         <property name="nameChecker" value="first"/>
     </bean>
 
-    <bean id="spellChecker2" class="com.gss.SpellChecker">
+    <bean id="spellChecker2" class="com.gss.test1.SpellChecker">
         <property name="nameChecker" value="second"/>
     </bean>
 
-    <bean id="javaCollection" class="com.gss.JavaCollection">
+    <bean id="javaCollection" class="com.gss.test1.JavaCollection">
         <property name="addressList">
             <list>
                 <value>India</value>

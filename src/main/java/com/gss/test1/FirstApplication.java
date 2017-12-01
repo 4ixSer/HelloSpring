@@ -1,9 +1,6 @@
-package com.gss;
+package com.gss.test1;
 
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.AbstractApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class FirstApplication {
     public static final String BEANS_XML = "Beans.xml";

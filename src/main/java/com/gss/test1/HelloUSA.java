@@ -1,4 +1,4 @@
-package com.gss;
+package com.gss.test1;
 
 public class HelloUSA {
     private String message1;

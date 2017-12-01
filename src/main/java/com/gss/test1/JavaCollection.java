@@ -1,4 +1,4 @@
-package com.gss;
+package com.gss.test1;
 
 import java.util.List;
 import java.util.Map;

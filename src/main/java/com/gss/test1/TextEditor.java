@@ -1,4 +1,4 @@
-package com.gss;
+package com.gss.test1;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

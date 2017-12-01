@@ -1,4 +1,4 @@
-package com.gss;
+package com.gss.test1;
 
 public class SpellChecker {
     private String nameChecker;

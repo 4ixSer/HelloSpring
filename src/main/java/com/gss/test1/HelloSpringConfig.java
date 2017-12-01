@@ -1,4 +1,4 @@
-package com.gss;
+package com.gss.test1;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
